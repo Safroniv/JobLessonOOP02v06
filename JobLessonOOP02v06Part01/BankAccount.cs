@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JobLessonOOP02v06Part04
+namespace JobLessonOOP02v06Part05
 {
     class BankAccount
     {
@@ -12,7 +12,6 @@ namespace JobLessonOOP02v06Part04
         public int NumberBankAcconut{get{ return _numberBankAccount; } }
         public decimal BallanceBankAccount { get { return _ballanceBankAccount; } }       
         public TypeBankAccount TypeBankAccount { get { return _typeBankAccount; } }
-
         public BankAccount() : this(100, TypeBankAccount.Current) { }
         public BankAccount(decimal ballanceBankAccount) : this(ballanceBankAccount, TypeBankAccount.Budget) { }
         public BankAccount(TypeBankAccount typeBankAccount) : this(2000, typeBankAccount) { }
