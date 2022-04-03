@@ -69,20 +69,20 @@ namespace JobLessonOOP02v06Part05
         {
             Console.WriteLine(
                         $"Невозможно снять данную сумму со счёта № {NumberBankAccount}. " + "\n" +
-                        $"Сумма {_sumWithdrawFormBankAccount} первышает балланс {_ballanceBankAccount}" + "\n" +
+                        $"Сумма {SumWithdrawFormBankAccount} первышает балланс {BallanceBankAccount}" + "\n" +
                         $"======================================================== ");
         }
         public void PrintWithdrowSucsess()
         {
             Console.WriteLine(
-                        $"Сумма {_sumWithdrawFormBankAccount} снята со счёта № {NumberBankAccount}. " + "\n" +
+                        $"Сумма {SumWithdrawFormBankAccount} снята со счёта № {NumberBankAccount}. " + "\n" +
                         $"Текущий балланс на счёте № {NumberBankAccount} составляет - {BallanceBankAccount}" + "\n"+
                         $"======================================================== ");
         }
         public void PrintPutOn()
         {
             Console.WriteLine(
-                        $"Сумма {_sumWithdrawFormBankAccount} пополнена на счёт № {NumberBankAccount}. " + "\n" +
+                        $"Сумма {SumWithdrawFormBankAccount} пополнена на счёт № {NumberBankAccount}. " + "\n" +
                         $"Текущий балланс на счёте № {NumberBankAccount} составляет - {BallanceBankAccount}" + "\n" +
                         $"======================================================== ");
         }
