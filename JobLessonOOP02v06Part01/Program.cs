@@ -6,11 +6,15 @@ namespace JobLessonOOP02v06Part03
     {
         static void Main()
         {
-            BankAccount mybankAccount = new BankAccount();
-            mybankAccount.SetNumberBankAcconut(1);
-            mybankAccount.SetBallanceBankAccount(9999.99m);
-            mybankAccount.SetTypeBankAccount(TypeBankAccount.Current);
-            mybankAccount.Print();
+            BankAccount mybankAccount0 = new BankAccount();
+            mybankAccount0.Print();
+            BankAccount mybankAccount1 = new BankAccount(50000.99m);
+            mybankAccount1.Print();
+            BankAccount mybankAccount2 = new BankAccount(TypeBankAccount.Debet);
+            mybankAccount2.Print();
+            BankAccount mybankAccount3 = new BankAccount(999_999.99m, TypeBankAccount.Credit);
+            mybankAccount3.Print();
+            Console.ReadLine();
         }
     }
 }
