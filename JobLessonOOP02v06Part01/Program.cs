@@ -8,7 +8,7 @@ namespace JobLessonOOP02v06Part01
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
         }
     }
