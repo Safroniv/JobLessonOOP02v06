@@ -9,9 +9,9 @@ namespace JobLessonOOP02v06Part04
         private TypeBankAccount _typeBankAccount;
         private static int _generateNumberBankAccount=0000_0000_1000_0000;
         public static int GenerateNumberBankAccount(){return _generateNumberBankAccount++;}
-        public int GetNumberBankAcconut() { return _numberBankAccount; }
-        public decimal GetBallanceBankAccount() { return _ballanceBankAccount; }        
-        public TypeBankAccount GetTypeBankAccount() { return _typeBankAccount; }
+        public int NumberBankAcconut{get{ return _numberBankAccount; } }
+        public decimal BallanceBankAccount { get { return _ballanceBankAccount; } }       
+        public TypeBankAccount TypeBankAccount { get { return _typeBankAccount; } }
 
         public BankAccount() : this(100, TypeBankAccount.Current) { }
         public BankAccount(decimal ballanceBankAccount) : this(ballanceBankAccount, TypeBankAccount.Budget) { }
@@ -25,9 +25,9 @@ namespace JobLessonOOP02v06Part04
         public void Print()
         {
             Console.WriteLine(
-                $"Банковский счёт пользователя: # {GetNumberBankAcconut()} " + "\n" +
-                $"Количество средств на счёте пользователя: {GetBallanceBankAccount() } " + "\n" +
-                $"Тип счёта: {GetTypeBankAccount()}" + "\n" +
+                $"Банковский счёт пользователя: # {NumberBankAcconut} " + "\n" +
+                $"Количество средств на счёте пользователя: {BallanceBankAccount } " + "\n" +
+                $"Тип счёта: {TypeBankAccount}" + "\n" +
                 $"======================================================== ");            
         }
     }
