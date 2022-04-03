@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JobLessonOOP02v06Part03
+namespace JobLessonOOP02v06Part04
 {
     class Program
     {
