@@ -1,4 +1,6 @@
-﻿namespace JobLessonOOP02v06Part02
+﻿using System;
+
+namespace JobLessonOOP02v06Part02
 {
     class Program
     {
