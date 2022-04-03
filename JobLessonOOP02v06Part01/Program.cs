@@ -14,6 +14,12 @@ namespace JobLessonOOP02v06Part05
             mybankAccount2.Print();
             BankAccount mybankAccount3 = new BankAccount(999_999.99m, TypeBankAccount.Credit);
             mybankAccount3.Print();
+            
+            mybankAccount1.WithdrawFormBankAccount();
+            mybankAccount1.Print();
+            mybankAccount1.PutOnBankAccount();
+            mybankAccount1.Print();
+
             Console.ReadLine();
         }
     }
