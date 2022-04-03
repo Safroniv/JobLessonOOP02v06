@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JobLessonOOP02v06Part01
+namespace JobLessonOOP02v06Part02
 {
     class BankAccount
     {
@@ -9,7 +9,7 @@ namespace JobLessonOOP02v06Part01
         private TypeBankAccount _typeBankAccount;
         public int GetNumberBankAcconut() { return _numberBankAccount; }
         public void SetNumberBankAcconut(int numberBankAccount)
-        { _numberBankAccount= numberBankAccount; }
+        { _numberBankAccount = numberBankAccount; }
         public decimal GetBallanceBankAccount() { return _ballanceBankAccount; }
         public void SetBallanceBankAccount(decimal ballanceBankAccount)
         { _ballanceBankAccount = ballanceBankAccount; }

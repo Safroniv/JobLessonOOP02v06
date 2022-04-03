@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobLessonOOP02v06Part01
+﻿namespace JobLessonOOP02v06Part02
 {
     class Program
     {
