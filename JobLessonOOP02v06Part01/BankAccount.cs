@@ -7,8 +7,8 @@ namespace JobLessonOOP02v06Part05
         private int _numberBankAccount;
         private decimal _ballanceBankAccount;
         private TypeBankAccount _typeBankAccount;
-        private decimal _sumWithdrawFormBankAccount=55000;
-        private decimal _sumPutOnBankAccount = 55000;
+        private decimal _sumWithdrawFormBankAccount;
+        private decimal _sumPutOnBankAccount;
         private static int _generateNumberBankAccount=0000_0000_1000_0000;
         public static int GenerateNumberBankAccount(){return _generateNumberBankAccount++;}
         public int NumberBankAccount{get{ return _numberBankAccount; } }
@@ -21,11 +21,12 @@ namespace JobLessonOOP02v06Part05
         }
         public decimal SumPutOnBankAccount
         {
-            get { return _sumWithdrawFormBankAccount; }
-            set { _sumWithdrawFormBankAccount = value; }
+            get { return _sumPutOnBankAccount; }
+            set { _sumPutOnBankAccount = value; }
         }
-        public void WithdrawFormBankAccount ()
+        public decimal WithdrawFormBankAccount (decimal sumWithdraw)
         {
+            _sumWithdrawFormBankAccount = sumWithdraw;
             if (NumberBankAccount==_numberBankAccount)
             {
                 if(_sumWithdrawFormBankAccount> _ballanceBankAccount)
@@ -34,18 +35,21 @@ namespace JobLessonOOP02v06Part05
                 }
                 if (_sumWithdrawFormBankAccount <= _ballanceBankAccount)
                 {
-                    _ballanceBankAccount = _ballanceBankAccount - _sumWithdrawFormBankAccount;
+                    _ballanceBankAccount -= _sumWithdrawFormBankAccount;
                     PrintWithdrowSucsess();
                 }
             }
+            return _ballanceBankAccount;
         }
-        public void PutOnBankAccount()
+        public decimal PutOnBankAccount(decimal sumPutOn)
         {
+            _sumPutOnBankAccount = sumPutOn;
             if (NumberBankAccount == _numberBankAccount)
             {
-                    _ballanceBankAccount = _ballanceBankAccount + _sumPutOnBankAccount;
+                    _ballanceBankAccount += _sumPutOnBankAccount;
                     PrintPutOn();                
             }
+            return _ballanceBankAccount;
         }
 
         public BankAccount() : this(100, TypeBankAccount.Current) { }
@@ -55,7 +59,7 @@ namespace JobLessonOOP02v06Part05
         {
             _numberBankAccount = GenerateNumberBankAccount();
             _ballanceBankAccount = ballanceBankAccount;
-            _typeBankAccount = typeBankAccount;            
+            _typeBankAccount = typeBankAccount;
         }
         public void Print()
         {
@@ -69,7 +73,7 @@ namespace JobLessonOOP02v06Part05
         {
             Console.WriteLine(
                         $"Невозможно снять данную сумму со счёта № {NumberBankAccount}. " + "\n" +
-                        $"Сумма {SumWithdrawFormBankAccount} первышает балланс {BallanceBankAccount}" + "\n" +
+                        $"Сумма {SumWithdrawFormBankAccount} превышает балланс {BallanceBankAccount}" + "\n" +
                         $"======================================================== ");
         }
         public void PrintWithdrowSucsess()
@@ -82,7 +86,7 @@ namespace JobLessonOOP02v06Part05
         public void PrintPutOn()
         {
             Console.WriteLine(
-                        $"Сумма {SumWithdrawFormBankAccount} пополнена на счёт № {NumberBankAccount}. " + "\n" +
+                        $"Сумма {SumPutOnBankAccount} пополнена на счёт № {NumberBankAccount}. " + "\n" +
                         $"Текущий балланс на счёте № {NumberBankAccount} составляет - {BallanceBankAccount}" + "\n" +
                         $"======================================================== ");
         }
