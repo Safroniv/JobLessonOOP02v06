@@ -8,8 +8,13 @@ namespace JobLessonOOP02v06Part01
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            BankAccount mybankAccount = new BankAccount();
+            mybankAccount.SetNumberBankAcconut(1);
+            mybankAccount.SetBallanceBankAccount(9999.99m);
+            mybankAccount.SetTypeBankAccount(TypeBankAccount.Current);
+            mybankAccount.Print();
         }
     }
 }
